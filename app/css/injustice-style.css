@@ -1,0 +1,308 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@font-face {
+    font-family: 'interstateregular';
+    src: url('../fonts/interstate_bold-webfont.eot');
+    src: url('../fonts/interstate_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/interstate_bold-webfont.woff') format('woff'),
+         url('../fonts/interstate_bold-webfont.ttf') format('truetype'),
+         url('../fonts/interstate_bold-webfont.svg#interstateregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    min-width: 1280px;
+    margin:0;
+    padding:0;
+    background-position: top center;
+	background-color:#000;
+	font-family: 'interstateregular';
+	color:#666;
+}
+
+a{
+	color:#eeba1d;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#eeba1d;
+	text-decoration:underline;
+}
+
+
+/************************************************************************************
+STRUCTURE
+*************************************************************************************/
+
+
+
+ 
+#left-side-outer {
+    width:50%;
+    float:left;
+    margin-right:-640px;
+    height: 2590px;
+}
+#left-side{
+    margin-right:640px;
+	background:url(../images/left_bg.jpg) no-repeat right;
+   
+    height: 3454px;
+}
+#center-column {
+    width:1280px;
+    float:left;
+    color: #666666;
+    background-color: #000000;
+    position:relative;
+    z-index:10;
+    height: 3454px;
+}
+#right-side-outer {
+    width:50%;
+    float:right;
+    margin-left:-641px;
+   
+}
+#right-side {
+    margin-left:640px;
+    height: 3454px;
+	background:url(../images/right_bg.jpg) no-repeat;
+   
+}
+#header{
+    clear:both;
+    height: 175px;
+    text-align: center;
+    background-color: #CC0000;
+}
+
+
+/************************************************************************************
+GENERAL CLASSES
+*************************************************************************************/
+
+.left_float{
+	float:left;
+}
+
+.displayNone{
+	display:none;	
+}
+
+.vs_divs{
+	float:left;
+	margin-top:-5px;	
+	
+}
+
+.grayScale { 
+	
+    filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+
+/************************************************************************************
+TOP BAR
+*************************************************************************************/
+
+#top_header > div{
+	width:33%;
+	float:left;
+	line-height:57px;
+	text-align:center;
+
+}
+
+#navbar_bg{
+	width:1280px; 
+	height:90px; 
+	position:absolute; 
+	margin-top:77px; 
+	z-index:9998;
+	background-color:#000;
+	
+}
+#navbar{
+	width:1280px; 
+	height:131px; 
+	position:absolute; 
+	
+	margin-left:78px;
+	z-index:9999;
+	
+}
+
+#navbar > div{
+	float:left; 
+	margin-left:-78px;
+}
+
+/************************************************************************************
+MAIN CONTENT
+*************************************************************************************/
+
+#main-content{
+	position:absolute;
+	top:166px;
+	
+	
+}
+
+/**BATMAN GLOW**********/
+#batman{z-index:2; position:absolute; top:0px;}
+#batmanGlow{z-index:3; position:absolute; top:0px; opacity:0}
+#batmanClick{z-index:4; position:absolute; top:0px; height:752px; width:315px; left:260px; cursor:pointer;}
+#champion{z-index:5; position:absolute; top:563px; left:112px;}
+
+
+/***PLAYER CARDS*********/
+/*line1*/
+#playerCard0{position:absolute; left:7px;  top:26px; cursor:pointer}
+#playerCard1{position:absolute; left:135px; top:26px; cursor:pointer}
+#playerCard2{position:absolute; left:272px; top:16px; cursor:pointer}
+#playerCard3{position:absolute; left:402px; top:18px; cursor:pointer}
+#playerCard4{position:absolute; left:537px; top:17px; cursor:pointer}
+/*line2*/
+#playerCard5{position:absolute; left:62px; top:200px; cursor:pointer}
+#playerCard6{position:absolute; left:195px; top:195px; cursor:pointer}
+#playerCard7{position:absolute; left:330px; top:190px; cursor:pointer}
+#playerCard8{position:absolute; left:465px; top:195px; cursor:pointer}
+#playerCard9{position:absolute; left:599px; top:192px; cursor:pointer}
+/*line3*/
+#playerCard10{position:absolute; left:268px; top:374px; cursor:pointer}
+#playerCard11{position:absolute; left:404px; top:366px; cursor:pointer}
+#playerCard12{position:absolute; left:544px; top:363px; cursor:pointer}
+/*line4*/
+#playerCard13{position:absolute; left:454px; top:539px; cursor:pointer}
+#playerCard14{position:absolute; left:593px; top:532px; cursor:pointer}
+
+#capeMask{position:absolute; left:428px; top:659px; }
+/************************************************************************************
+SUPERFIGHTS
+*************************************************************************************/
+
+.vs_divs{
+	
+	cursor:pointer;
+}
+
+
+#superfights{
+	position:absolute;
+	top:917px;	
+}
+
+
+
+/************************************************************************************
+QUARTER_FINALS
+*************************************************************************************/
+#quarter_finals{
+	position:absolute;
+	top:1440px;	
+}
+
+
+
+
+/************************************************************************************
+SEMIFINALS
+*************************************************************************************/
+#semifinals{
+	position:absolute;
+	top:1965px;	
+}
+
+
+
+/************************************************************************************
+FINALE
+*************************************************************************************/
+#finale{
+	position:absolute;
+	top:2486px;	
+}
+
+/************************************************************************************
+FOOTER
+*************************************************************************************/
+#footer{
+	position:absolute;
+	top:3143px;	
+}
+
+#icon_links{
+	width:1280px;
+	text-align:center;	
+}
+#icon_links ul{
+	list-style:none;	
+}
+
+#icon_links ul li{
+	display:inline;	
+	padding:10px;
+}
+#legal1{
+	padding-left:55px;
+	padding-right:55px;
+	text-align:justify;
+	font-size:12px;
+}
+
+#legal2{
+	width:1280px;
+	padding-left:55px;
+	padding-right:55px;
+	text-align:justify;
+	font-size:12px;
+}
+#legal2 > div{
+	padding:20px;	
+}
+
+/************************************************************************************
+MODALS
+*************************************************************************************/
+
+#video_modal{
+	background:url(../images/modal_yt_bg.png) no-repeat; 
+	width:1010px; 
+	height:652px; 
+	padding-left:32px; 
+	padding-right:32px; 
+	padding-top:30px;
+	display:none;	
+}
+
+.video_thumb{
+	margin-left:auto; 
+	margin-right:auto; 
+	
+	height:100px;
+	overflow:auto;
+	 
+	margin-top:-8px;	
+}
+
+.video_thumb_div{
+	float:left;
+	margin-left:5px;
+	
+}
+
+.thumbs{
+	padding-right:5px; 
+	cursor:pointer
+	
+}
