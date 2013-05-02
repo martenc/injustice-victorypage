@@ -306,3 +306,14 @@ MODALS
 	cursor:pointer
 	
 }
+
+
+#video_modal{
+	
+	width:596px; 
+	height:404px; 
+	padding-left:342px; 
+	padding-right:342px; 
+	padding-top:30px;
+	display:none;	
+}

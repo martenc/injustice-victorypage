@@ -27,6 +27,12 @@
 	</div>
     
     
+    <div id="bio_modal">
+		<div class="bio_content"></div>
+        
+	</div>
+    
+    
     <div id="about_modal" style="display:none; width:870px; height:530px; background-color:#000; padding:30px; color:#c2c2c2">
     	<h2 style="color:#c58612">ABOUT BATTLE ARENA +</h2><BR>
     		Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.<br><br> 
@@ -76,12 +82,12 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
         
    	    <div style="width:754px; height:752px; position:absolute; z-index:7; left:527px; top:0px">
         		<?php
-				$cardsArr = array('bane','wonder_woman','joker', 'shazam', 'green_lantern', 
-				'hawk_girl', 'green_arrow', 'aquaman', 'flash', 'harley_queen',
-				'cyborg', 'lex_luthor', 'sinestro',
-				'solomon_grundy','superman');
+				$cardsArr = array('bane','wonderwoman','joker', 'shazam', 'green_lantern', 
+				'hawkgirl', 'greenarrow', 'aquaman', 'flash', 'harleyquinn',
+				'cyborg', 'lex', 'sinestro',
+				'grundy','superman');
 				for($i=0; $i<sizeOf($cardsArr); $i++){ ?>
-            	<div id="playerCard<?= $i ?>" class="playerCard" ><img src="images/<?= $cardsArr[$i] ?>.png" class="grayScale"></div>
+            	<div id="playerCard<?= $i ?>" class="playerCard" data-card="<?= $cardsArr[$i] ?>" ><img src="images/<?= $cardsArr[$i] ?>.png" class="grayScale"></div>
 				<?php } ?>
                 <div id="capeMask" ><img src="images/cape_mask.png" ></div>
           </div>
@@ -562,6 +568,31 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 					
 			 });//JSON
 		 });//vs_divs CLICK
+		 
+		 
+		 
+		 
+		 
+		 
+		 $('.playerCard').on('click', function(e) {
+			
+         	e.preventDefault();
+				
+			bioContent = $('.bio_content'); 
+			$('#bio_modal').bPopup({
+				onOpen: function() {
+					bioContent.html('<iframe  src="/#/bios/'+this.getAttribute('data-card')+'"></iframe>' || '');
+									},
+				onClose: function() {
+					bioContent.empty();
+					
+	
+				
+				}
+			});
+					
+		
+		 });//playercard CLICK
 		 
 		 
 		 
