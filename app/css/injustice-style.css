@@ -103,12 +103,12 @@ GENERAL CLASSES
 
 .grayScale { 
 	
-    filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
+    filter: url(filters.svg#darken); /* Firefox 3.5+ */
+   
+   -webkit-filter: brightness(35%);   /* Google Chrome & Safari 6+ */
+    -moz-filter: rightness(35%);
+    -ms-filter: rightness(35%);
+    -o-filter: rightness(35%);
 }
 
 /************************************************************************************
@@ -313,10 +313,10 @@ MODALS
 
 #bio_modal{
 	
-	width:810px; 
-	height:555px; 
-	padding-left:235px; 
-	padding-right:235px; 
+	width:880px; 
+	height:655px; 
+	padding-left:200px; 
+	padding-right:200px; 
 	padding-top:30px;
 	display:none;	
 }
@@ -336,5 +336,5 @@ MODALS
 }
 
 #movieDiv{
-	position:absolute; top:70px; z-index:9998; width:923px; left:178px; display:none;	
+	position:absolute; top:70px; z-index:9998; width:1280px; left:0px; display:none;	
 }
