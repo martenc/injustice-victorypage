@@ -582,7 +582,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			$('#bio_modal').bPopup({
 				onOpen: function() {
 					
-					bioContent.html('<iframe width="596" height="404"  src="/#/bios/'+charName+'"></iframe>' || '');
+					bioContent.html('<iframe width="802" height="507"  src="/#/bios/'+charName+'"></iframe>' || '');
 					 //bioContent.html('<iframe  src="test.html" ></iframe>' || '');
 				},
 				onClose: function() {
