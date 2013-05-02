@@ -62,12 +62,12 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
                     <?php } ?>
                     
                 <div id="about" style="margin-top:-5px; cursor:pointer"><img src="images/about.png"><img src="images/about_on.png" class="displayNone"></div>
-                <!-- BRICKS MOVIE 
+                <!-- BRICKS MOVIE  -->
                 <div id="movieDiv" >
                     <div id='movie'></div>
                    
                 </div>
-                -->
+               
             </nav>
     	</header>
        
@@ -185,17 +185,17 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		/************************************************************************************
 		BRICKS ANIMATION
 		*************************************************************************************/		
-		/*
+		
 		$('#movie').jsMovie({
 			
 			images : ['Breaking-Frames.png'],
 		   	folder : 'images/',
-			height : 844, width: 923,
-		   	grid   : {height:844, width:923, columns:25, rows:1},
+			height : 1080, width: 1280,
+		   	grid   : {height:1080, width:1280, columns:15, rows:1},
 		   	showPreLoader : false,
 		   	playOnLoad    : false,
 			repeat		: false,
-		   	fps:18     
+		   	fps:15     
 		});
 		
 		$('#movie').on('ended', function(e) {
@@ -219,8 +219,6 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 				$('#movie').jsMovie('play');
 			},500);	
 		}
-		
-		*/
 		/************************************************************************************
 		Sticky Nav
 		*************************************************************************************/
@@ -234,10 +232,9 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		<?php for($i=1;$i<5; $i++){ ?>
         $("#menu_<?= $i ?>").click(function (e){
             e.preventDefault();
-			/*
 			if($(window).scrollTop() != $("#superfights").offset().top - navbarHeight)
 				playMovie();
-			*/
+			
 			$('html, body').animate({
 				scrollTop: $("#superfights").offset().top - navbarHeight
 				}, { 
@@ -269,10 +266,10 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 				}, {
 				easing: 'easeOutBounce',
 				duration: 1700});
-				/*
+				
 			if($(window).scrollTop() != $("#quarter_finals").offset().top - navbarHeight)
 				playMovie();
-				*/
+				
 			var imgArray = $("#quarter_finals").children('img').map(function(){
 				return this;
 			}).get();
@@ -289,10 +286,10 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 				}, {
 				easing: 'easeOutBounce',
 				duration: 1800});
-				/*
+				
 			if($(window).scrollTop() != $("#semifinals").offset().top - navbarHeight)
 				playMovie();
-				*/
+				
 			var imgArray = $("#semifinals").children('img').map(function(){
 				return this;
 			}).get();
@@ -309,10 +306,10 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 				}, {
 				easing: 'easeOutBounce',
 				duration: 2000});
-			/*
+			
 			if($(window).scrollTop() != $("#finale").offset().top - navbarHeight)
 				playMovie();
-				*/
+				
 			var imgArray = $("#finale").children('img').map(function(){
 				return this;
 			}).get();
