@@ -2,9 +2,14 @@
 
 /* Controllers */
 
-function HomeCtrl($scope, Character) {
+function RedirectCtrl($scope, $location, $rootScope) {
+	//alert('test');
+	window.location = "index.php";
+}
+
+function HomeCtrl($scope, $location, Character) {
 	// $scope.characters = Character.query();
- //  	$scope.orderProp = 'age';
+ 	// $scope.orderProp = 'age';
 }
 
 
