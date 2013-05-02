@@ -79,7 +79,7 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
             <!-- Batman Glow -->
             <div id="batmanGlow" ><img src="images/batman_large_glow.png" ></div>
             <!-- Transparent div for mouseover glow effect-->
-            <div id="batmanClick" class="playerCard" data-card="batman" ></div>
+            <div id="batmanClick" ></div>
             <!-- Battle Arena Champion : BATMAN -->
             <div id="champion" ><img src="images/champion.png"></div>
         
@@ -618,6 +618,31 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 				onOpen: function() {
 					
 					bioContent.html('<iframe width="802" height="547"  src="/#/bios/'+charName+'"></iframe>' || '');
+					 //bioContent.html('<iframe  src="test.html" ></iframe>' || '');
+				},
+				onClose: function() {
+					bioContent.empty();
+					
+	
+				
+				}
+			});
+					
+		
+		 });//playercard CLICK
+		 
+		 
+		 
+		 
+		 $('#batmanClick').on('click', function(e) {
+			
+         	e.preventDefault();
+			
+			bioContent = $('.bio_content'); 
+			$('#bio_modal').bPopup({
+				onOpen: function() {
+					
+					bioContent.html('<iframe width="802" height="547"  src="/#/bios/batman"></iframe>' || '');
 					 //bioContent.html('<iframe  src="test.html" ></iframe>' || '');
 				},
 				onClose: function() {
