@@ -142,16 +142,23 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
             </div><!-- /icon_links -->
             
             <div id="legal1">
-            	INJUSTICE: GODS AMONG US software © 2012 Warner Bros. Entertainment Inc. Developed by NetherRealm Studios. All other trademarks and copyrights are the property of their respective owners. "PlayStation" and the "PS" Family logo are registered trademarks and the "PS3" and the PlayStation Network logo are trademarks of Sony Computer Entertainment Inc. Microsoft, Xbox, Xbox 360, Xbox LIVE, and the Xbox logos are trademarks of the Microsoft group of companies and are used under license from Microsoft. Nintendo trademarks and copyrights are properties of Nintendo. All rights reserved.
+            	INJUSTICE: GODS AMONG US software © 2012 Warner Bros. Entertainment Inc. Developed by NetherRealm Studios. All other trademarks and copyrights are the property of their respective owners. "PlayStation" and the "PS" Family logo are registered trademarks and the "PS3" and the PlayStation Network logo are trademarks of Sony Computer Entertainment Inc. Microsoft, Xbox, Xbox 360, Xbox LIVE, and the Xbox logos are trademarks of the Microsoft group of companies and are used under license from Microsoft. Nintendo trademarks and copyrights are properties of Nintendo. All rights reserved.<br>
+<br>
+&nbsp;
+                <div class="left_float"><img src="images/wb_logo.jpg"  style="padding-right:5px;"></div>
+                <div>DC LOGO, and all characters, their distinctive likenesses, and related elements are trademarks of DC Comics © 2012.
+NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entertainment Inc.
+(s12)</div>
             </div><!-- /legal1 -->
             
             <div id="legal2">
             	
-                <div class="left_float"><img src="images/rating.jpg"></div>
-                <div class="left_float"><img src="images/wb_logo.jpg"></div>
-                <div  >DC LOGO, and all characters, their distinctive likenesses, and related elements are trademarks of DC Comics © 2012.
-NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entertainment Inc.
-(s12)</div>
+                <div class="left_float"><a href="http://www.esrb.org/" target="_blank"><img src="images/rating.jpg"></a></div>
+                <div class="left_float"><a href="http://www.pegi.info/en/" target="_blank"><img src="images/footerIcon1.jpg"></a></div>
+                <div class="left_float"><a href="http://www.usk.de/en/" target="_blank"><img src="images/footerIcon2.jpg"></a></div>
+                
+
+				<div style="float:right;"> <a href="http://www.warnerbros.com/privacy/terms.html" target="_blank" style="color:#666">TERMS OF USE</a> &nbsp; &nbsp; <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank" style="color:#666">PRIVACY POLICY</a></div>
             </div><!-- /legal2 -->
         
         </div><!-- /footer -->
