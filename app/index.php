@@ -577,12 +577,14 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		 $('.playerCard').on('click', function(e) {
 			
          	e.preventDefault();
-				
+			var charName = this.getAttribute('data-card')
 			bioContent = $('.bio_content'); 
 			$('#bio_modal').bPopup({
 				onOpen: function() {
-					bioContent.html('<iframe  src="/#/bios/'+this.getAttribute('data-card')+'"></iframe>' || '');
-									},
+					
+					bioContent.html('<iframe  src="/#/bios/'+charName+'"></iframe>' || '');
+					 //bioContent.html('<iframe  src="test.html" ></iframe>' || '');
+				},
 				onClose: function() {
 					bioContent.empty();
 					
