@@ -8,13 +8,7 @@
 </head>
 
 <body>
-	<!-- Bricks Movie 
-    
-    <div id='movie'></div>
-    <div id='play'>play</div>
-    <div id='stop'>stop</div>
-    <div id='pause'>pause</div>
--->
+	
     <!-- MODALS -->
 
     <div id="video_modal">
@@ -66,8 +60,15 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
                     <?php } ?>
                     
                 <div id="about" style="margin-top:-5px; cursor:pointer"><img src="images/about.png"><img src="images/about_on.png" class="displayNone"></div>
+                <!-- BRICKS MOVIE -->
+                <div id="movieDiv" style="position:absolute; top:70px; z-index:9998; width:1000px; margin-left:140px; display:none">
+                    <div id='movie'></div>
+                   
+                </div>
             </nav>
     	</header>
+       
+    
         
         <div id="main-content">
         	<div><img src="images/main_bg.jpg"></div>
@@ -76,7 +77,7 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
             <!-- Batman Glow -->
             <div id="batmanGlow" ><img src="images/batman_large_glow.png" ></div>
             <!-- Transparent div for mouseover glow effect-->
-            <div id="batmanClick" ></div>
+            <div id="batmanClick" class="playerCard" data-card="batman" ></div>
             <!-- Battle Arena Champion : BATMAN -->
             <div id="champion" ><img src="images/champion.png"></div>
         
@@ -176,15 +177,20 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		*************************************************************************************/		
 		
 		$('#movie').jsMovie({
-			sequence: '00####.png',
-			from: 1,
-			to: 120,
-			folder : "ani/",
-			height:1220,
-			width:1080,
-			loader: {path:"img/preloader.png",height:50,width:50,rows:2,columns:4},        
+			
+			images : ['Breaking-Frames.png'],
+		   	folder : 'images/',
+			height : 844, width: 923,
+		   	grid   : {height:844, width:923, columns:25, rows:1},
+		   	showPreLoader : false,
+		   	playOnLoad    : false,
+			repeat		: false,
+		   	fps:18     
 		});
-	
+		
+		$('#movie').on('ended', function(e) {
+			$('#movieDiv').hide();
+		});
 		$('#play').click(function(){
 			$('#movie').jsMovie('play');
 		});
@@ -197,7 +203,12 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			$('#movie').jsMovie('pause');
 		});
 
-		
+		function playMovie(){
+			setTimeout(function(){
+				$('#movieDiv').show();
+				$('#movie').jsMovie('play');
+			},500);	
+		}
 		/************************************************************************************
 		Sticky Nav
 		*************************************************************************************/
@@ -211,6 +222,9 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		<?php for($i=1;$i<5; $i++){ ?>
         $("#menu_<?= $i ?>").click(function (e){
             e.preventDefault();
+			if($(window).scrollTop() != $("#superfights").offset().top - navbarHeight)
+				playMovie();
+			
 			$('html, body').animate({
 				scrollTop: $("#superfights").offset().top - navbarHeight
 				}, { 
@@ -236,11 +250,15 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		<?php } ?>
 		$("#menu_5").click(function (e){
             e.preventDefault();
+			
 			$('html, body').animate({
 				scrollTop: $("#quarter_finals").offset().top-navbarHeight
 				}, {
 				easing: 'easeOutBounce',
 				duration: 1700});
+				
+			if($(window).scrollTop() != $("#quarter_finals").offset().top - navbarHeight)
+				playMovie();
 				
 			var imgArray = $("#quarter_finals").children('img').map(function(){
 				return this;
@@ -252,11 +270,15 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		
 		$("#menu_6").click(function (e){
             e.preventDefault();
+			
 			$('html, body').animate({
 				scrollTop: $("#semifinals").offset().top-navbarHeight
 				}, {
 				easing: 'easeOutBounce',
 				duration: 1800});
+				
+			if($(window).scrollTop() != $("#semifinals").offset().top - navbarHeight)
+				playMovie();
 				
 			var imgArray = $("#semifinals").children('img').map(function(){
 				return this;
@@ -268,11 +290,15 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		
 		$("#menu_7").click(function (e){
             e.preventDefault();
+			
 			$('html, body').animate({
 				scrollTop: $("#finale").offset().top-navbarHeight
 				}, {
 				easing: 'easeOutBounce',
 				duration: 2000});
+			
+			if($(window).scrollTop() != $("#finale").offset().top - navbarHeight)
+				playMovie();
 				
 			var imgArray = $("#finale").children('img').map(function(){
 				return this;
