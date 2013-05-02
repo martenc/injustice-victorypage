@@ -1,10 +1,10 @@
 {
     "name": "GREEN ARROW",
     "bio_name": "Oliver Queen",
-    "bio_ability_1": "Expert archer",
     "bio_race": "Human",
     "bio_abilities": {
     	"ability": [
+            "Expert archer",
 			"Wide variety of customized arrows",
 			"Superior athlete, and martial artist"
     		]

@@ -11,5 +11,6 @@
     		]
     	},
     "bio_url": "http:\/\/www.dccomics.com\/characters\/batman",
-    "bio_image_big": "https:\/\/s3-us-west-1.amazonaws.com\/injustice-cdn\/victorypage\/batman-big.png"
+    "bio_image_big": "https:\/\/s3-us-west-1.amazonaws.com\/injustice-cdn\/victorypage\/batman-big.png",
+    "bio_download": "https:\/\/s3-us-west-1.amazonaws.com\/injustice-cdn\/victorypage\/batman-en.jpg"
 }

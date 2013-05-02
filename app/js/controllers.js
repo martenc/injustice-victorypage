@@ -3,8 +3,8 @@
 /* Controllers */
 
 function HomeCtrl($scope, Character) {
-	$scope.characters = Character.query();
-  	$scope.orderProp = 'age';
+	// $scope.characters = Character.query();
+ //  	$scope.orderProp = 'age';
 }
 
 
