@@ -86,7 +86,7 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
         
    	    <div id="cardsDiv">
         		<?php
-				$cardsArr = array('bane','wonderwoman','joker', 'shazam', 'greenlantern', 
+				$cardsArr = array('bane','wonder-woman','joker', 'shazam', 'greenlantern', 
 				'hawkgirl', 'greenarrow', 'aquaman', 'flash', 'harleyquinn',
 				'cyborg', 'lex', 'sinestro',
 				'grundy','superman');
