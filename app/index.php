@@ -82,7 +82,7 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
         
    	    <div style="width:754px; height:752px; position:absolute; z-index:7; left:527px; top:0px">
         		<?php
-				$cardsArr = array('bane','wonderwoman','joker', 'shazam', 'green_lantern', 
+				$cardsArr = array('bane','wonderwoman','joker', 'shazam', 'greenlantern', 
 				'hawkgirl', 'greenarrow', 'aquaman', 'flash', 'harleyquinn',
 				'cyborg', 'lex', 'sinestro',
 				'grundy','superman');
@@ -582,7 +582,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			$('#bio_modal').bPopup({
 				onOpen: function() {
 					
-					bioContent.html('<iframe  src="/#/bios/'+charName+'"></iframe>' || '');
+					bioContent.html('<iframe width="596" height="404"  src="/#/bios/'+charName+'"></iframe>' || '');
 					 //bioContent.html('<iframe  src="test.html" ></iframe>' || '');
 				},
 				onClose: function() {
