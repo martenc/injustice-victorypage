@@ -173,7 +173,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 
 
 </body>
-<script src="http://code.jquery.com/jquery-latest.min.js" language="javascript"></script>
+<script src="lib/jquery-latest.min.js" language="javascript"></script>
 <script src="lib/jquery.bpopup.min.js" language="javascript"></script><!-- Modal http://dinbror.dk/blog/bPopup/ -->
 <script src="lib/jquery.sticky.js" language="javascript"></script><!-- http://labs.anthonygarand.com/sticky/ -->
 <script src="lib/jquery.jsmovie.1.4.3b.min.js" language="javascript"></script><!-- jsMovie https://code.google.com/p/jsmovie/ -->
