@@ -22,12 +22,14 @@
     
     
     <div id="bio_modal">
+    	<div id="close" ><img src="images/close.png"></div>
 		<div class="bio_content"></div>
         
 	</div>
     
     
-    <div id="about_modal" style="display:none; width:870px; height:530px; background-color:#000; padding:30px; color:#c2c2c2">
+    <div id="about_modal">
+   		<div id="close1" ><img src="images/close.png"></div>
     	<h2 style="color:#c58612">ABOUT BATTLE ARENA +</h2><BR>
     		Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.<br><br> 
 Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?<br>
@@ -61,7 +63,7 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
                     
                 <div id="about" style="margin-top:-5px; cursor:pointer"><img src="images/about.png"><img src="images/about_on.png" class="displayNone"></div>
                 <!-- BRICKS MOVIE -->
-                <div id="movieDiv" style="position:absolute; top:70px; z-index:9998; width:1000px; margin-left:140px; display:none">
+                <div id="movieDiv" >
                     <div id='movie'></div>
                    
                 </div>
@@ -81,7 +83,7 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
             <!-- Battle Arena Champion : BATMAN -->
             <div id="champion" ><img src="images/champion.png"></div>
         
-   	    <div style="width:754px; height:752px; position:absolute; z-index:7; left:527px; top:0px">
+   	    <div id="cardsDiv">
         		<?php
 				$cardsArr = array('bane','wonderwoman','joker', 'shazam', 'greenlantern', 
 				'hawkgirl', 'greenarrow', 'aquaman', 'flash', 'harleyquinn',
@@ -608,7 +610,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			$('#bio_modal').bPopup({
 				onOpen: function() {
 					
-					bioContent.html('<iframe width="802" height="507"  src="/#/bios/'+charName+'"></iframe>' || '');
+					bioContent.html('<iframe width="802" height="547"  src="/#/bios/'+charName+'"></iframe>' || '');
 					 //bioContent.html('<iframe  src="test.html" ></iframe>' || '');
 				},
 				onClose: function() {
@@ -623,7 +625,13 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		 });//playercard CLICK
 		 
 		 
+		 $('#close').on('click', function(e) {
+		 	$('#bio_modal').bPopup().close();
+		 });
 		 
+		  $('#close1').on('click', function(e) {
+		 	$('#about_modal').bPopup().close();
+		 });
 		 
 		 
     });//document ready

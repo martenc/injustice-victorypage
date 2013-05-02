@@ -166,6 +166,9 @@ MAIN CONTENT
 
 
 /***PLAYER CARDS*********/
+#cardsDiv{
+	width:754px; height:752px; position:absolute; z-index:7; left:527px; top:0px;	
+}
 /*line1*/
 #playerCard0{position:absolute; left:7px;  top:26px; cursor:pointer}
 #playerCard1{position:absolute; left:135px; top:26px; cursor:pointer}
@@ -311,9 +314,27 @@ MODALS
 #bio_modal{
 	
 	width:802px; 
-	height:507px; 
+	height:547px; 
 	padding-left:239px; 
 	padding-right:239px; 
 	padding-top:30px;
 	display:none;	
+}
+
+
+
+#close{
+	position:absolute; margin-top:30px; margin-left:760px; cursor:pointer;	
+}
+
+#about_modal{
+	display:none; width:870px; height:530px; background-color:#000; padding:30px; color:#c2c2c2	
+}
+
+#close1{
+	position:absolute;  margin-left:840px; cursor:pointer	
+}
+
+#movieDiv{
+	position:absolute; top:70px; z-index:9998; width:1000px; margin-left:140px; display:none	
 }
