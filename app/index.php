@@ -87,7 +87,7 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
         
    	    <div id="cardsDiv">
         		<?php
-				$cardsArr = array('bane','wonderwoman','joker', 'shazam', 'greenlantern', 
+				$cardsArr = array('bane','wonder-woman','joker', 'shazam', 'greenlantern', 
 				'hawkgirl', 'greenarrow', 'aquaman', 'flash', 'harleyquinn',
 				'cyborg', 'lex', 'sinestro',
 				'grundy','superman');
@@ -173,8 +173,8 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
     </div><!--Right Background Margin -->
 
 
-</body>
-<script src="http://code.jquery.com/jquery-latest.min.js" language="javascript"></script>
+
+<script src="lib/jquery-latest.min.js" language="javascript"></script>
 <script src="lib/jquery.bpopup.min.js" language="javascript"></script><!-- Modal http://dinbror.dk/blog/bPopup/ -->
 <script src="lib/jquery.sticky.js" language="javascript"></script><!-- http://labs.anthonygarand.com/sticky/ -->
 <!-- <script src="lib/jquery.jsmovie.1.4.3b.min.js" language="javascript"></script> --><!-- jsMovie https://code.google.com/p/jsmovie/ -->
@@ -680,7 +680,16 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 	
 </script>
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-40619940-1', 'dccomics.com');
+  ga('send', 'pageview');
 
+</script>
 
+</body>
 </html>

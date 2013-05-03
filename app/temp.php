@@ -1,23 +1,14 @@
 <!doctype html>
-<html lang="en" ng-app="injusticeApp">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Injustice Battle Arena - Victory Page</title>
   <link rel="stylesheet" href="css/index.css"/>
 </head>
 <body>
-  <div ng-view></div>
 
 
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
-  <!-- <script src="lib/angular/angular.js"></script> -->
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="lib/angular/angular-resource.js"></script>
+<img id="commingsoon" src="https://s3-us-west-1.amazonaws.com/injustice-cdn/victorypage/comingsoon.jpg" style="width: 100%; height: auto;">
 
 </body>
 
