@@ -8,7 +8,7 @@
 <body>
 
 
-<img id="commingsoon" src="images/comingsoon.jpg" style="width: 100%; height: auto;">
+<img id="commingsoon" src="https://s3-us-west-1.amazonaws.com/injustice-cdn/victorypage/comingsoon.jpg" style="width: 100%; height: auto;">
 
 </body>
 
