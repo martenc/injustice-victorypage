@@ -274,6 +274,11 @@ FOOTER
 	padding:20px;	
 }
 
+
+#extraSpace{
+	width:1280px;
+	height:400px;
+}
 /************************************************************************************
 MODALS
 *************************************************************************************/
@@ -304,6 +309,10 @@ MODALS
 	
 }
 
+#close2{
+	position:absolute;  margin-left:960px; margin-top:-40px; cursor:pointer;
+}
+
 .thumbs{
 	padding-right:5px; 
 	cursor:pointer
@@ -313,26 +322,26 @@ MODALS
 
 #bio_modal{
 	
-	width:880px; 
-	height:655px; 
-	padding-left:200px; 
-	padding-right:200px; 
-	padding-top:30px;
-	display:none;	
+	width:804px; 
+	height:550px; 
+
+	padding:10px;
+	display:none;
+	
 }
 
 
 
-#close{
-	position:absolute; margin-top:30px; margin-left:760px; cursor:pointer;	
+#close{ /* bio */
+	position:absolute; margin-top:-15px; margin-left:794px; cursor:pointer;	
 }
 
 #about_modal{
 	display:none; width:870px; height:530px; background-color:#000; padding:30px; color:#c2c2c2	
 }
 
-#close1{
-	position:absolute;  margin-left:840px; cursor:pointer	
+#close1{/* about */
+	position:absolute;  margin-left:885px; margin-top:-50px; cursor:pointer;
 }
 
 #movieDiv{

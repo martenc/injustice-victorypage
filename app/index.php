@@ -12,6 +12,7 @@
     <!-- MODALS -->
 
     <div id="video_modal">
+	    <div id="close2" ><img src="images/close.png"></div>
 		<div class="video_content"></div>
         <div class="video_thumb">
         <?php for($i=0;$i<13; $i++){ ?>
@@ -30,12 +31,8 @@
     
     <div id="about_modal">
    		<div id="close1" ><img src="images/close.png"></div>
-    	<h2 style="color:#c58612">ABOUT BATTLE ARENA +</h2><BR>
-    		Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.<br><br> 
-Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?<br>
-<br>
-
-Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+    	<h2 style="color:#c58612">The Injustice Battle Arena </h2><BR>
+    		Over the span of ten weeks, sixteen of the biggest DC heroes and villains faced off in a bracket-style tournament that let the audience vote for who they think would win. We placed Wonder Woman versus Harley Quinn, Flash versus Shazam! and Lex Luthor versus Joker, and left their fate in your hands. Every week, YouTube personality Taryn Southern not only introduced us to the match ups for that round, but also took to the streets to get the opinion of the average man on the street. We also got the opinions of some fantastic celebrity experts to help start the discussion of why one character should win over the other. In the end, The Dark Knight himself, Batman blew away the competition and flew straight to the final round. He ended up squaring off against the Man of Steel, Superman for supreme Battle Arena victory. Take a look at how each week went down as we present the entire road to the championships here on the Injustice Battle Arena recap site. 
     </div>
     
     
@@ -99,32 +96,32 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
         </div><!-- main-content -->
         
          <div id="superfights" class="roundTitle">
-        	<img src="images/superfights.jpg"><img src="images/superfights_on.jpg" class="displayNone">
+        	<img src="images/superfights.jpg" id="superfightsOff"><img src="images/superfights_on.jpg"  id="superfightsOn" class="displayNone">
             <?php for($i=1;$i<5;$i++){ ?>
-        	<div id="playlist<?= $i ?>" class="vs_divs"><img src="images/superfight<?= $i ?>.jpg"><img src="images/superfight<?= $i ?>_on.jpg" class="displayNone"></div>
+        	<div id="playlist<?= $i ?>" class="vs_divs"><img src="images/superfight<?= $i ?>.jpg" class="imgSet1"><img src="images/superfight<?= $i ?>_on.jpg" class="displayNone imgSetOn1"></div>
             <?php } ?>
         </div><!-- superfights -->
         
         <div id="quarter_finals" class="roundTitle">
-        	<img src="images/quarter_finals.jpg"><img src="images/quarter_finals_on.jpg" class="displayNone">
+        	<img src="images/quarter_finals.jpg" id="quarter_finalsOff"><img src="images/quarter_finals_on.jpg" class="displayNone" id="quarter_finalsOn">
         	<?php for($i=1;$i<5;$i++){ ?>
-        	<div id="playlist<?= (4+$i) ?>" class="vs_divs"><img src="images/quarter_finals<?= $i ?>.jpg"><img src="images/quarter_finals<?= $i ?>_on.jpg" class="displayNone"></div>
+        	<div id="playlist<?= (4+$i) ?>" class="vs_divs"><img src="images/quarter_finals<?= $i ?>.jpg"  class="imgSet2"><img src="images/quarter_finals<?= $i ?>_on.jpg" class="displayNone imgSetOn2"></div>
             <?php } ?>
         </div><!-- quarter_finals -->
         
         
         <div id="semifinals" class="roundTitle">
-        	<img src="images/semifinals.jpg"><img src="images/semifinals_on.jpg" class="displayNone">
+        	<img src="images/semifinals.jpg" id="semifinalsOff"><img src="images/semifinals_on.jpg" id="semifinalsOn" class="displayNone">
         	<?php for($i=1;$i<3;$i++){ ?>
-        	<div id="playlist<?= (8+$i) ?>" class="vs_divs"><img src="images/semifinals<?= $i ?>.jpg"><img src="images/semifinals<?= $i ?>_on.jpg" class="displayNone"></div>
+        	<div id="playlist<?= (8+$i) ?>" class="vs_divs"><img src="images/semifinals<?= $i ?>.jpg" class="imgSet3"><img src="images/semifinals<?= $i ?>_on.jpg" class="displayNone imgSetOn3"></div>
             <?php } ?>
         </div><!-- semifinals -->
         
         
         <div id="finale" class="roundTitle">
-        	<img src="images/finale.jpg"><img src="images/finale_on.jpg" class="displayNone">
+        	<img src="images/finale.jpg"  id="finaleOff"><img src="images/finale_on.jpg"  id="finaleOn" class="displayNone">
         	
-        	<div id="playlist11" class="vs_divs"><img src="images/finale1.jpg"><img src="images/finale1_on.jpg" class="displayNone"></div>
+        	<div id="playlist11" class="vs_divs"><img src="images/finale1.jpg" class="imgSet4"><img src="images/finale1_on.jpg" class="displayNone imgSetOn4"></div>
            
         </div><!-- finale -->
         
@@ -162,7 +159,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 
 				<div style="float:right;"> <a href="http://www.warnerbros.com/privacy/terms.html" target="_blank" style="color:#666">TERMS OF USE</a> &nbsp; &nbsp; <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank" style="color:#666">PRIVACY POLICY</a></div>
             </div><!-- /legal2 -->
-        
+        	<div id="extraSpace"></div>
         </div><!-- /footer -->
         
     </div><!--/center-column -->
@@ -177,6 +174,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 <script src="lib/jquery-latest.min.js" language="javascript"></script>
 <script src="lib/jquery.bpopup.min.js" language="javascript"></script><!-- Modal http://dinbror.dk/blog/bPopup/ -->
 <script src="lib/jquery.sticky.js" language="javascript"></script><!-- http://labs.anthonygarand.com/sticky/ -->
+<script src="lib/waypoints.min.js"language="javascript"></script><!-- http://imakewebthings.com/jquery-waypoints/ -->
 <!-- <script src="lib/jquery.jsmovie.1.4.3b.min.js" language="javascript"></script> --><!-- jsMovie https://code.google.com/p/jsmovie/ -->
 <script src="lib/jquery.easing.min.js" language="javascript"></script>
 <script>
@@ -221,13 +219,80 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			},500);	
 		}
 		*/
+		var navbarHeight=90;//for the scrollTo
+		
+		function showBlock(blockNum){
+			$(".imgSet"+blockNum).hide();
+			$('.imgSetOn'+blockNum).addClass('grayScale imgSetOn'+blockNum);
+			$('.imgSetOn'+blockNum).show();
+			
+		}
+		
+		function hideBlock(blockNum){
+			$('.imgSet'+blockNum).show();
+			$('.imgSetOn'+blockNum).hide();
+			
+		}
+		
+		
+		<?php $blocksArray = array('superfights', 'quarter_finals', 'semifinals', 'finale'); 
+			$blockNum=1;
+			foreach($blocksArray as $block):
+		?>
+		var <?= $block ?>Top = false;
+		$('#<?= $block ?>').waypoint(function() {
+		 	<?= $block ?>Top=true;
+			$("#<?= $block ?>Off").hide();
+			$("#<?= $block ?>On").show();
+			
+			showBlock(<?= $blockNum ?>)
+			//adding dark color to fights
+			
+			
+		}, { offset: navbarHeight });
+
+
+
+		$('#<?= $block ?>').waypoint(function() {
+		 	<?= $block ?>Top = false;
+			$("#<?= $block ?>Off").show();
+			$("#<?= $block ?>On").hide();
+			
+			//adding dark color to fights
+			hideBlock(<?= $blockNum ?>);
+			
+			
+		}, { offset: navbarHeight-90 });
+		
+		
+		$('#<?= $block ?>').waypoint(function() {
+		 	<?= $block ?>Top = false;
+			$("#<?= $block ?>Off").show();
+			$("#<?= $block ?>On").hide();
+			
+			//adding dark color to fights
+			hideBlock(<?= $blockNum ?>);
+			
+			
+		}, { offset: navbarHeight+50 });
+
+		<?php $blockNum++; 
+				endforeach; ?>
+
+
+
+
+
+		
 		/************************************************************************************
 		Sticky Nav
 		*************************************************************************************/
+		
+		
 		$("#navbar").sticky({topSpacing:0});
 		$("#navbar_bg").sticky({topSpacing:-77});
 		
-		var navbarHeight=90;//for the scrollTo
+		
 		/************************************************************************************
 		Nav Menu scroll to with easing effect
 		*************************************************************************************/
@@ -243,21 +308,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 				}, { 
 				easing: 'easeOutBounce',
 				duration: 1500});
-			
-			
-			
-			
-			
-			
-			var imgArray = $("#superfights").children('img').map(function(){
-				return this;
-			}).get();
-			imgArray[0].style.display='none';
-			imgArray[1].style.display='inline';
-			
-			
-			
-		
+
 		
         });
 		<?php } ?>
@@ -273,11 +324,10 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			if($(window).scrollTop() != $("#quarter_finals").offset().top - navbarHeight)
 				playMovie();
 			*/
-			var imgArray = $("#quarter_finals").children('img').map(function(){
-				return this;
-			}).get();
-			imgArray[0].style.display='none';
-			imgArray[1].style.display='inline';
+	
+			
+			
+
         });
 		
 		$("#menu_6").click(function (e){
@@ -288,15 +338,11 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 				}, {
 				easing: 'easeOutBounce',
 				duration: 1800});
-				
+			/*	
 			if($(window).scrollTop() != $("#semifinals").offset().top - navbarHeight)
 				playMovie();
-				
-			var imgArray = $("#semifinals").children('img').map(function(){
-				return this;
-			}).get();
-			imgArray[0].style.display='none';
-			imgArray[1].style.display='inline';	
+			*/
+
 		
         });
 		
@@ -312,11 +358,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			if($(window).scrollTop() != $("#finale").offset().top - navbarHeight)
 				playMovie();
 			*/
-			var imgArray = $("#finale").children('img').map(function(){
-				return this;
-			}).get();
-			imgArray[0].style.display='none';
-			imgArray[1].style.display='inline';	
+
 		
         });
 		
@@ -333,6 +375,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			var imgArrayMenu = $("#menu_<?= $i ?>").children('img').map(function(){
 				return this;
 			}).get();
+			
 			imgArrayMenu[0].style.display='none';
 			imgArrayMenu[1].style.display='inline';
 			
@@ -411,6 +454,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			}).get();
 			imgArray[0].style.display='none';
 			imgArray[1].style.display='inline';
+		
 		});//roundTitle mouseover
 		
 		$(".roundTitle").mouseout(function (e){
@@ -495,6 +539,11 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			}).get();
 			imgArrayMenu[0].style.display='none';
 			imgArrayMenu[1].style.display='inline';
+			var orgClass = imgArrayMenu[1].className;
+			
+			var newClass = orgClass.replace('grayScale', ' ');
+			//alert(orgClass+"  "+newClass);
+			imgArrayMenu[1].className = newClass;
 			
 			
 		
@@ -508,8 +557,23 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			var imgArrayMenu = $(this).children('img').map(function(){
 				return this;
 			}).get();
-			imgArrayMenu[0].style.display='inline';
-			imgArrayMenu[1].style.display='none';
+			
+			<?php 
+				$blockNum=1;
+				foreach($blocksArray as $block):
+			?>
+			
+			if(<?= $block ?>Top && imgArrayMenu[0].className=='imgSet<?= $blockNum ?>'){
+				imgArrayMenu[1].className = 'imgSetOn<?= $blockNum ?> grayScale';
+				return;
+			}
+			
+			<?php $blockNum++; endforeach; ?>
+			
+				imgArrayMenu[0].style.display='inline';
+				imgArrayMenu[1].style.display='none';
+			
+			
         });
 		
 		/************************************************************************************
@@ -620,7 +684,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			$('#bio_modal').bPopup({
 				onOpen: function() {
 					
-					bioContent.html('<iframe width="802" height="547"  src="/#/bios/'+charName+'"></iframe>' || '');
+					bioContent.html('<iframe width="804" height="550" frameborder="0" style="overflow:hidden" scrolling="no" src="/#/bios/'+charName+'"></iframe>' || '');
 					 //bioContent.html('<iframe  src="test.html" ></iframe>' || '');
 				},
 				onClose: function() {
@@ -645,7 +709,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			$('#bio_modal').bPopup({
 				onOpen: function() {
 					
-					bioContent.html('<iframe width="802" height="547"  src="/#/bios/batman"></iframe>' || '');
+					bioContent.html('<iframe width="804" height="550" frameborder="0"  style="overflow:hidden" scrolling="no" src="/#/bios/batman"></iframe>' || '');
 					 //bioContent.html('<iframe  src="test.html" ></iframe>' || '');
 				},
 				onClose: function() {
@@ -666,6 +730,10 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		 
 		  $('#close1').on('click', function(e) {
 		 	$('#about_modal').bPopup().close();
+		 });
+		 
+		  $('#close2').on('click', function(e) {
+		 	$('#video_modal').bPopup().close();
 		 });
 		 
 		 
