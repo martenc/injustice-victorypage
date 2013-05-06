@@ -59,7 +59,7 @@ $detect = new Mobile_Detect();
             <nav id="navbar" >
                 
                     <?php for($i=1; $i<8; $i++){  ?>
-                    <div id="menu_<?= $i ?>" style="cursor:pointer"><img src="images/menu_<?= $i ?>.png"><img src="images/menu_<?= $i ?>_on.png" style="display:none"></div>
+                    <div id="menu_<?= $i ?>" style="cursor:pointer"><img id="menu_off<?= $i ?>" src="images/menu_<?= $i ?>.png"><img  id="menu_on<?= $i ?>"src="images/menu_<?= $i ?>_on.png" style="display:none"></div>
                     <?php } ?>
                     
                 <div id="about" style="margin-top:-5px; cursor:pointer"><img src="images/about.png"><img src="images/about_on.png" class="displayNone"></div>
@@ -163,7 +163,30 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 
 				<div style="float:right;"> <a href="http://www.warnerbros.com/privacy/terms.html" target="_blank" style="color:#666">TERMS OF USE</a> &nbsp; &nbsp; <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank" style="color:#666">PRIVACY POLICY</a></div>
             </div><!-- /legal2 -->
-        	<div id="extraSpace">&nbsp;</div>
+        	<div id="extraSpace"><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+&nbsp;</div>
         </div><!-- /footer -->
         
     </div><!--/center-column -->
@@ -227,14 +250,31 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		
 		function showBlock(blockNum){
 			$(".imgSet"+blockNum).hide();
-			$('.imgSetOn'+blockNum).addClass('grayScale imgSetOn'+blockNum);
+			$('.imgSetOn'+blockNum).addClass('<?php if (!$detect->isMobile()) { echo 'grayScale'; } ?> imgSetOn'+blockNum);
 			$('.imgSetOn'+blockNum).show();
+			if(blockNum=='1'){
+				$('#menu_off1, #menu_off2, #menu_off3, #menu_off4').hide();
+				$('#menu_on1, #menu_on2, #menu_on3, #menu_on4').show();	
+			}else{
+				menuBlock = parseInt(blockNum)+3;
+				$('#menu_off'+menuBlock).hide();
+				$('#menu_on'+menuBlock).show();
+			}
 			
 		}
 		
 		function hideBlock(blockNum){
 			$('.imgSet'+blockNum).show();
 			$('.imgSetOn'+blockNum).hide();
+			
+			if(blockNum=='1'){
+				$('#menu_off1, #menu_off2, #menu_off3, #menu_off4').show();
+				$('#menu_on1, #menu_on2, #menu_on3, #menu_on4').hide();	
+			}else{
+				menuBlock = parseInt(blockNum)+3;
+				$('#menu_off'+menuBlock).show();
+				$('#menu_on'+menuBlock).hide();
+			}
 			
 		}
 		
@@ -254,6 +294,32 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			
 			
 		}, { offset: navbarHeight });
+		
+		
+		var <?= $block ?>Top = false;
+		$('#<?= $block ?>').waypoint(function() {
+		 	<?= $block ?>Top=true;
+			$("#<?= $block ?>Off").hide();
+			$("#<?= $block ?>On").show();
+			
+			showBlock(<?= $blockNum ?>);
+			//adding dark color to fights
+			
+			
+		}, { offset: navbarHeight-200 });
+		
+		
+		var <?= $block ?>Top = false;
+		$('#<?= $block ?>').waypoint(function() {
+		 	<?= $block ?>Top=true;
+			$("#<?= $block ?>Off").hide();
+			$("#<?= $block ?>On").show();
+			
+			showBlock(<?= $blockNum ?>)
+			//adding dark color to fights
+			
+			
+		}, { offset: navbarHeight+200 });
 
 
 
@@ -266,7 +332,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			hideBlock(<?= $blockNum ?>);
 			
 			
-		}, { offset: navbarHeight-90 });
+		}, { offset: navbarHeight-290 });
 		
 		
 		$('#<?= $block ?>').waypoint(function() {
@@ -278,7 +344,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			hideBlock(<?= $blockNum ?>);
 			
 			
-		}, { offset: navbarHeight+50 });
+		}, { offset: navbarHeight+250 });
 
 		<?php $blockNum++; 
 				endforeach; ?>
@@ -301,31 +367,39 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		Nav Menu scroll to with easing effect
 		*************************************************************************************/
 		
-		<?php if ($detect->isMobile()) { echo '//'; } ?>
-		<?php for($i=1;$i<5; $i++){ ?>
-        $("#menu_<?= $i ?>").click(function (e){
+		
+		
+        $("#menu_1, #menu_2, #menu_3, #menu_4").click(function (e){
             e.preventDefault();
 			/*
 			if($(window).scrollTop() != $("#superfights").offset().top - navbarHeight)
 				playMovie();
 			*/
+			var blockName = 'superfights';
+			$("#"+blockName+"Off").hide();
+			$("#"+blockName+"On").show();
+			showBlock(1);
+			
 			$('html, body').animate({
-				scrollTop: $("#superfights").offset().top - navbarHeight
+				scrollTop: $("#"+blockName).offset().top - navbarHeight
 				}, { 
 				<?php if ($detect->isMobile()) { echo '//'; } ?>easing: 'easeOutBounce',
-				duration: 1500});
+				duration: 1000});
 
 		
         });
-		<?php } ?>
+		
 		$("#menu_5").click(function (e){
             e.preventDefault();
+			
+			
+			
 			
 			$('html, body').animate({
 				scrollTop: $("#quarter_finals").offset().top-navbarHeight
 				}, {
 				<?php if ($detect->isMobile()) { echo '//'; } ?>easing: 'easeOutBounce',
-				duration: 1700});
+				duration: 1000});
 			/*	
 			if($(window).scrollTop() != $("#quarter_finals").offset().top - navbarHeight)
 				playMovie();
@@ -343,7 +417,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 				scrollTop: $("#semifinals").offset().top-navbarHeight
 				}, {
 				<?php if ($detect->isMobile()) { echo '//'; } ?>easing: 'easeOutBounce',
-				duration: 1800});
+				duration: 1000});
 			/*	
 			if($(window).scrollTop() != $("#semifinals").offset().top - navbarHeight)
 				playMovie();
@@ -359,7 +433,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 				scrollTop: $("#finale").offset().top-navbarHeight
 				}, {
 				<?php if ($detect->isMobile()) { echo '//'; } ?>easing: 'easeOutBounce',
-				duration: 2000});
+				duration: 1000});
 			/*
 			if($(window).scrollTop() != $("#finale").offset().top - navbarHeight)
 				playMovie();
@@ -375,16 +449,15 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		<?php for($i=1;$i<8; $i++){ ?>
         $("#menu_<?= $i ?>").mouseover(function (e){
             e.preventDefault();
+			<?php if($i<5){ ?>
+				
+			 $("#menu_off1, #menu_off2, #menu_off3, #menu_off4").hide();
+			 $("#menu_on1, #menu_on2, #menu_on3, #menu_on4").show();
 			
-			
-			
-			var imgArrayMenu = $("#menu_<?= $i ?>").children('img').map(function(){
-				return this;
-			}).get();
-			
-			imgArrayMenu[0].style.display='none';
-			imgArrayMenu[1].style.display='inline';
-			
+			<?php }else{ ?>
+				$("#menu_off<?= $i ?>").hide();
+			 	$("#menu_on<?= $i ?>").show();
+			<?php } ?>
 			
 		
         });
@@ -396,17 +469,15 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		<?php for($i=1;$i<8; $i++){ ?>
         $("#menu_<?= $i ?>").mouseout(function (e){
             e.preventDefault();
+			<?php if($i<5){ ?>
+				
+			 $("#menu_off1, #menu_off2, #menu_off3, #menu_off4").show();
+			 $("#menu_on1, #menu_on2, #menu_on3, #menu_on4").hide();
 			
-			
-			
-			var imgArrayMenu = $("#menu_<?= $i ?>").children('img').map(function(){
-				return this;
-			}).get();
-			imgArrayMenu[0].style.display='inline';
-			imgArrayMenu[1].style.display='none';
-			
-			
-		
+			<?php }else{ ?>
+				$("#menu_off<?= $i ?>").show();
+			 	$("#menu_on<?= $i ?>").hide();
+			<?php } ?>
         });
 		<?php } ?>
 		
