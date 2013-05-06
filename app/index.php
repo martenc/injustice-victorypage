@@ -600,11 +600,12 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			autoHeight =childImg.css('height', 'auto').height();
 			
 			childImg.removeClass();
-			childImg.animate({
+			childImg.stop().animate({
 				height:'220px'
 				}, {	
 				easing: 'easeInSine',			
-				duration: 100
+				duration: 100,
+				queue:false
 			});//animate			
 			$(this).css('z-index','20');
 			
@@ -618,7 +619,8 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 				height:autoHeight
 				}, {
 				easing: 'easeOutSine',	
-				duration: 500
+				duration: 500,
+				queue:false
 			});//animate
 			$(this).css('z-index','auto');
 			
