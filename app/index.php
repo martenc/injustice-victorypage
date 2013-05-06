@@ -1,3 +1,7 @@
+<?php
+include 'lib/Mobile_Detect.php';
+$detect = new Mobile_Detect();
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -159,7 +163,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 
 				<div style="float:right;"> <a href="http://www.warnerbros.com/privacy/terms.html" target="_blank" style="color:#666">TERMS OF USE</a> &nbsp; &nbsp; <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank" style="color:#666">PRIVACY POLICY</a></div>
             </div><!-- /legal2 -->
-        	<div id="extraSpace"></div>
+        	<div id="extraSpace">&nbsp;</div>
         </div><!-- /footer -->
         
     </div><!--/center-column -->
@@ -296,6 +300,8 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		/************************************************************************************
 		Nav Menu scroll to with easing effect
 		*************************************************************************************/
+		
+		<?php if ($detect->isMobile()) { echo '//'; } ?>
 		<?php for($i=1;$i<5; $i++){ ?>
         $("#menu_<?= $i ?>").click(function (e){
             e.preventDefault();
@@ -306,7 +312,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			$('html, body').animate({
 				scrollTop: $("#superfights").offset().top - navbarHeight
 				}, { 
-				easing: 'easeOutBounce',
+				<?php if ($detect->isMobile()) { echo '//'; } ?>easing: 'easeOutBounce',
 				duration: 1500});
 
 		
@@ -318,7 +324,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			$('html, body').animate({
 				scrollTop: $("#quarter_finals").offset().top-navbarHeight
 				}, {
-				easing: 'easeOutBounce',
+				<?php if ($detect->isMobile()) { echo '//'; } ?>easing: 'easeOutBounce',
 				duration: 1700});
 			/*	
 			if($(window).scrollTop() != $("#quarter_finals").offset().top - navbarHeight)
@@ -336,7 +342,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			$('html, body').animate({
 				scrollTop: $("#semifinals").offset().top-navbarHeight
 				}, {
-				easing: 'easeOutBounce',
+				<?php if ($detect->isMobile()) { echo '//'; } ?>easing: 'easeOutBounce',
 				duration: 1800});
 			/*	
 			if($(window).scrollTop() != $("#semifinals").offset().top - navbarHeight)
@@ -352,7 +358,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			$('html, body').animate({
 				scrollTop: $("#finale").offset().top-navbarHeight
 				}, {
-				easing: 'easeOutBounce',
+				<?php if ($detect->isMobile()) { echo '//'; } ?>easing: 'easeOutBounce',
 				duration: 2000});
 			/*
 			if($(window).scrollTop() != $("#finale").offset().top - navbarHeight)
@@ -363,7 +369,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
         });
 		
 		
-		
+		<?php if (!$detect->isMobile()): ?>
 		
 		
 		<?php for($i=1;$i<8; $i++){ ?>
@@ -435,6 +441,9 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		
         });
 		
+		
+		<?php endif; ?>
+		
 		$("#about").click(function (e){
             e.preventDefault();
 			$('#about_modal').bPopup();
@@ -447,6 +456,9 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		/************************************************************************************
 		mouseover  class="roundTitle"
 		*************************************************************************************/
+		
+		<?php if (!$detect->isMobile()): ?>
+		
 		$(".roundTitle").mouseover(function (e){
             e.preventDefault();
 			var imgArray = $(this).children('img').map(function(){
@@ -459,9 +471,27 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		
 		$(".roundTitle").mouseout(function (e){
             e.preventDefault();
+			
+			
+			
+			<?php 
+				//keep title color lit if it is on top			
+				$blockNum=1;
+				foreach($blocksArray as $block):
+			?>
+			
+			if(<?= $block ?>Top && this.id=='<?= $block ?>') return;
+			
+			<?php $blockNum++; endforeach; ?>
+			
+			
+			
 			var imgArray = $(this).children('img').map(function(){
 				return this;
 			}).get();
+			
+	
+			
 			imgArray[0].style.display='inline';
 			imgArray[1].style.display='none';
 		});//roundTitle mouseout
@@ -575,6 +605,8 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			
 			
         });
+		
+		<?php endif; ?>
 		
 		/************************************************************************************
 		MODAL
