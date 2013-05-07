@@ -654,6 +654,8 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			imgArrayMenu[1].className = newClass;
 			
 			
+			
+			
 		
         });
 		
