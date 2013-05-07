@@ -685,17 +685,17 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 		MODAL
 		*************************************************************************************/	
 		var playlists = new Array(
-		'PL07cv15WuZRV0n861i9T_UKZTl5JnjN_u',//superfight1
-		'PL07cv15WuZRUSud6sOzN2n4U9kkZTjIXz',//superfight2
-		'PL07cv15WuZRUJ2BHgptHBPs2Z9o-QgVjR',//superfight3
-		'PL07cv15WuZRUJ2BHgptHBPs2Z9o-QgVjR',//superfight4
-		'PL07cv15WuZRX4l4AtgBsJ-MitZXGzHAdQ',//QF
-		'PL07cv15WuZRX4l4AtgBsJ-MitZXGzHAdQ',//QF
-		'PL07cv15WuZRX4l4AtgBsJ-MitZXGzHAdQ',//QF
-		'PL07cv15WuZRX4l4AtgBsJ-MitZXGzHAdQ',//QF
-		'PL07cv15WuZRU_em35hXIflPGfp311ST32', //SM
-		'PL07cv15WuZRU_em35hXIflPGfp311ST32', //SM
-		'PL07cv15WuZRXMjBUHfLPObPxKouWug6mN');//F
+		'PL07cv15WuZRUvCaCOJXUYlBVoGvGa4hGW',//superfight1
+		'PL07cv15WuZRU-02HihYG7w7ZGdm04SpjI',//superfight2
+		'PL07cv15WuZRXhetgWGdzn-XzHriIzxAnK',//superfight3
+		'PL07cv15WuZRUT5wBAatplCtnCZyuC3sET',//superfight4
+		'PL07cv15WuZRVwQjXOKlyZMuxsF6lsmV3Z',//QF
+		'PL07cv15WuZRUZHYRWF75ACutqN4EyoRUr',//QF
+		'PL07cv15WuZRVCN3KTS-p_KaPBkbg9lQFg',//QF
+		'PL07cv15WuZRV4pZmdzI-aSYUlNh_5dXq2',//QF
+		'PL07cv15WuZRWb422XrpMmhnAWbQcZbHv4', //SM
+		'PL07cv15WuZRUGJ6Ogb_iW5ezCUdxvdwcf', //SM
+		'PL07cv15WuZRUkWRLxxnvdwCyDhz0PPq0K');//F
 		
 		$('.vs_divs').on('click', function(e) {
 			
