@@ -10,3 +10,9 @@ RewriteRule ^(.*)$ - [env=ps:http]
 # change // to /
 #RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*)//(.*) HTTP/ [NC]
 #RewriteRule ^.*$ %{ENV:ps}://%{SERVER_NAME}/%1/%2 [R=301,L]
+
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^modal.* index.php [R=301,NC,L]
+RewriteRule ^tournaments.* index.php [R=301,NC,L]

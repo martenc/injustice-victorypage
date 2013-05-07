@@ -4,8 +4,8 @@
 
 function RedirectCtrl($scope, $location, $rootScope) {
 	//alert('test');
-	//window.location = "index.php";
-	window.location = "temp.php";
+	window.location = "index.php";
+	//window.location = "temp.php";
 }
 
 function HomeCtrl($scope, $location, Character) {
