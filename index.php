@@ -1,5 +1,5 @@
 <?php
-include 'app/lib/Mobile_Detect.php';
+include 'app/lib/Mobile_Detect.php';//http://code.google.com/p/php-mobile-detect/
 $detect = new Mobile_Detect();
 ?>
 <!DOCTYPE HTML>
@@ -8,7 +8,22 @@ $detect = new Mobile_Detect();
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Injustice Results</title>
 	<link  rel="stylesheet"  href="app/css/injustice-style.css" type="text/css">
-   
+   <?php 
+   	//fixing safari bug with brighness filter
+   	if($detect->isSafari()):
+  	?>
+    <style>
+		.grayScale { 
+	
+			filter: url(filters.svg#darken); /* Firefox 3.5+ */
+		   
+		   -webkit-filter: brightness(75%);   /* Google Chrome & Safari 6+ */
+			-moz-filter: brightness(75%);
+			-ms-filter: brightness(75%);
+			-o-filter: brightness(75%);
+		}
+	</style>
+    <?php endif; ?>
 </head>
 
 <body>
