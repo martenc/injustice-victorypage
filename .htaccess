@@ -1,4 +1,4 @@
-RewriteCond %{HTTPS} =on
+RewriteCond %{HTTPS} =off
 RewriteRule ^(.*)$ - [env=ps:https]
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ - [env=ps:http]
