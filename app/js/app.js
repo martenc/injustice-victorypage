@@ -21,17 +21,17 @@ angular.module('injusticeApp', ['injusticeApp.filters', 'injusticeApp.services',
  Injustice Battle Arena
                     .                    .         .      .  
 ,-. . . ,_, ,-. ,-. |-. ,-. ,-. ,-.    ,-| . ,-. . |- ,-. |   	Los Angeles
-,-| | |  /  |-' | | | | |-' |   | |    | | | | | | |  ,-| |  	2013
+,-| | |  /  |-' | | | | |-' |   | |    | | | | | | |  ,-| |  	  2013
 `-^ `-| '"' `-' ' ' ^-' `-' '   `-|    `-^ ' `-| ' `' `-^ `' 
      /|                          ,|           ,|             
     `-'                          `'           `'             
 
- Exec Prod	    : Steve Bastien
- PMO		    : Jeff Wong
- AE				: James Kim
- Dev/Arch       : Marten Compoc, Erick Soto, Tomer Almog
- Creative		: Ricardo Mireles
- PM				: Richard Salinas
+ Exec Prod	     : Steve Bastien
+ PMO		         : Jeff Wong
+ AE				       : James Kim
+ Dev/Arch        : Marten Compoc, Erick Soto, Tomer Almog
+ Creative		     : Ricardo Mireles
+ PM				       : Richard Salinas
 
  Special thanks to WBI, DC Comics, GameStop, LA Promo
  -----------------------------------------------------------------------*/
