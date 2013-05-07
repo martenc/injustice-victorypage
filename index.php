@@ -1,5 +1,5 @@
 <?php
-include 'lib/Mobile_Detect.php';
+include 'app/lib/Mobile_Detect.php';
 $detect = new Mobile_Detect();
 ?>
 <!DOCTYPE HTML>
@@ -7,7 +7,7 @@ $detect = new Mobile_Detect();
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Injustice Results</title>
-	<link  rel="stylesheet"  href="css/injustice-style.css" type="text/css">
+	<link  rel="stylesheet"  href="app/css/injustice-style.css" type="text/css">
    
 </head>
 
@@ -16,7 +16,7 @@ $detect = new Mobile_Detect();
     <!-- MODALS -->
 
     <div id="video_modal">
-	    <div id="close2" ><img src="images/close.png"></div>
+	    <div id="close2" ><img src="app/images/close.png"></div>
 		<div class="video_content"></div>
         <div class="video_thumb">
         <?php for($i=0;$i<13; $i++){ ?>
@@ -27,14 +27,14 @@ $detect = new Mobile_Detect();
     
     
     <div id="bio_modal">
-    	<div id="close" ><img src="images/close.png"></div>
+    	<div id="close" ><img src="app/images/close.png"></div>
 		<div class="bio_content"></div>
         
 	</div>
     
     
     <div id="about_modal">
-   		<div id="close1" ><img src="images/close.png"></div>
+   		<div id="close1" ><img src="app/images/close.png"></div>
     	<h2 style="color:#c58612">The Injustice Battle Arena </h2><BR>
     		Over the span of ten weeks, sixteen of the biggest DC heroes and villains faced off in a bracket-style tournament that let the audience vote for who they think would win. We placed Wonder Woman versus Harley Quinn, Flash versus Shazam! and Lex Luthor versus Joker, and left their fate in your hands. Every week, YouTube personality Taryn Southern not only introduced us to the match ups for that round, but also took to the streets to get the opinion of the average man on the street. We also got the opinions of some fantastic celebrity experts to help start the discussion of why one character should win over the other. In the end, The Dark Knight himself, Batman blew away the competition and flew straight to the final round. He ended up squaring off against the Man of Steel, Superman for supreme Battle Arena victory. Take a look at how each week went down as we present the entire road to the championships here on the Injustice Battle Arena recap site. 
     </div>
@@ -51,18 +51,18 @@ $detect = new Mobile_Detect();
     <div id="center-column">
     	<header>
             <div id="top_header">
-                <div><img src="images/gods_among_us.jpg"></div>
-                <div><img src="images/battle_arena.jpg"></div>
+                <div><img src="app/images/gods_among_us.jpg"></div>
+                <div><img src="app/images/battle_arena.jpg"></div>
                 <div><p style="font-size:10px; color:#393939">Brought to you by <a href="http://www.dccomics.com/" target="_blank">DCcomics.com</a> and <a href="http://www.injustice.com/" target="_blank">Injustice: Gods Among Us</a></p></div>
             </div><!-- /top header -->
             <div id="navbar_bg"></div>
             <nav id="navbar" >
                 
                     <?php for($i=1; $i<8; $i++){  ?>
-                    <div id="menu_<?= $i ?>" style="cursor:pointer"><img id="menu_off<?= $i ?>" src="images/menu_<?= $i ?>.png"><img  id="menu_on<?= $i ?>"src="images/menu_<?= $i ?>_on.png" style="display:none"></div>
+                    <div id="menu_<?= $i ?>" style="cursor:pointer"><img id="menu_off<?= $i ?>" src="app/images/menu_<?= $i ?>.png"><img  id="menu_on<?= $i ?>"src="app/images/menu_<?= $i ?>_on.png" style="display:none"></div>
                     <?php } ?>
                     
-                <div id="about" style="margin-top:-5px; cursor:pointer"><img src="images/about.png"><img src="images/about_on.png" class="displayNone"></div>
+                <div id="about" style="margin-top:-5px; cursor:pointer"><img src="app/images/about.png"><img src="app/images/about_on.png" class="displayNone"></div>
                 <!-- BRICKS MOVIE 
                 <div id="movieDiv" >
                     <div id='movie'></div>
@@ -76,15 +76,15 @@ $detect = new Mobile_Detect();
     
         
         <div id="main-content">
-        	<div><img src="images/main_bg.jpg"></div>
+        	<div><img src="app/images/main_bg.jpg"></div>
             <!-- Batman -->
-            <div id="batman" ><img src="images/batman_large.png"></div>
+            <div id="batman" ><img src="app/images/batman_large.png"></div>
             <!-- Batman Glow -->
-            <div id="batmanGlow" ><img src="images/batman_large_glow.png" ></div>
+            <div id="batmanGlow" ><img src="app/images/batman_large_glow.png" ></div>
             <!-- Transparent div for mouseover glow effect-->
             <div id="batmanClick" ></div>
             <!-- Battle Arena Champion : BATMAN -->
-            <div id="champion" ><img src="images/champion.png"></div>
+            <div id="champion" ><img src="app/images/champion.png"></div>
         
    	    <div id="cardsDiv">
         		<?php
@@ -93,39 +93,39 @@ $detect = new Mobile_Detect();
 				'cyborg', 'lex', 'sinestro',
 				'grundy','superman');
 				for($i=0; $i<sizeOf($cardsArr); $i++){ ?>
-            	<div id="playerCard<?= $i ?>" class="playerCard" data-card="<?= $cardsArr[$i] ?>" ><img src="images/<?= $cardsArr[$i] ?>.png" class="grayScale"></div>
+            	<div id="playerCard<?= $i ?>" class="playerCard" data-card="<?= $cardsArr[$i] ?>" ><img src="app/images/<?= $cardsArr[$i] ?>.png" class="grayScale"></div>
 				<?php } ?>
-                <div id="capeMask" ><img src="images/cape_mask.png" ></div>
+                <div id="capeMask" ><img src="app/images/cape_mask.png" ></div>
           </div>
         </div><!-- main-content -->
         
          <div id="superfights" class="roundTitle">
-        	<img src="images/superfights.jpg" id="superfightsOff"><img src="images/superfights_on.jpg"  id="superfightsOn" class="displayNone">
+        	<img src="app/images/superfights.jpg" id="superfightsOff"><img src="app/images/superfights_on.jpg"  id="superfightsOn" class="displayNone">
             <?php for($i=1;$i<5;$i++){ ?>
-        	<div id="playlist<?= $i ?>" class="vs_divs"><img src="images/superfight<?= $i ?>.jpg" class="imgSet1"><img src="images/superfight<?= $i ?>_on.jpg" class="displayNone imgSetOn1"></div>
+        	<div id="playlist<?= $i ?>" class="vs_divs"><img src="app/images/superfight<?= $i ?>.jpg" class="imgSet1"><img src="app/images/superfight<?= $i ?>_on.jpg" class="displayNone imgSetOn1"></div>
             <?php } ?>
         </div><!-- superfights -->
         
         <div id="quarter_finals" class="roundTitle">
-        	<img src="images/quarter_finals.jpg" id="quarter_finalsOff"><img src="images/quarter_finals_on.jpg" class="displayNone" id="quarter_finalsOn">
+        	<img src="app/images/quarter_finals.jpg" id="quarter_finalsOff"><img src="app/images/quarter_finals_on.jpg" class="displayNone" id="quarter_finalsOn">
         	<?php for($i=1;$i<5;$i++){ ?>
-        	<div id="playlist<?= (4+$i) ?>" class="vs_divs"><img src="images/quarter_finals<?= $i ?>.jpg"  class="imgSet2"><img src="images/quarter_finals<?= $i ?>_on.jpg" class="displayNone imgSetOn2"></div>
+        	<div id="playlist<?= (4+$i) ?>" class="vs_divs"><img src="app/images/quarter_finals<?= $i ?>.jpg"  class="imgSet2"><img src="app/images/quarter_finals<?= $i ?>_on.jpg" class="displayNone imgSetOn2"></div>
             <?php } ?>
         </div><!-- quarter_finals -->
         
         
         <div id="semifinals" class="roundTitle">
-        	<img src="images/semifinals.jpg" id="semifinalsOff"><img src="images/semifinals_on.jpg" id="semifinalsOn" class="displayNone">
+        	<img src="app/images/semifinals.jpg" id="semifinalsOff"><img src="app/images/semifinals_on.jpg" id="semifinalsOn" class="displayNone">
         	<?php for($i=1;$i<3;$i++){ ?>
-        	<div id="playlist<?= (8+$i) ?>" class="vs_divs"><img src="images/semifinals<?= $i ?>.jpg" class="imgSet3"><img src="images/semifinals<?= $i ?>_on.jpg" class="displayNone imgSetOn3"></div>
+        	<div id="playlist<?= (8+$i) ?>" class="vs_divs"><img src="app/images/semifinals<?= $i ?>.jpg" class="imgSet3"><img src="app/images/semifinals<?= $i ?>_on.jpg" class="displayNone imgSetOn3"></div>
             <?php } ?>
         </div><!-- semifinals -->
         
         
         <div id="finale" class="roundTitle">
-        	<img src="images/finale.jpg"  id="finaleOff"><img src="images/finale_on.jpg"  id="finaleOn" class="displayNone">
+        	<img src="app/images/finale.jpg"  id="finaleOff"><img src="app/images/finale_on.jpg"  id="finaleOn" class="displayNone">
         	
-        	<div id="playlist11" class="vs_divs"><img src="images/finale1.jpg" class="imgSet4"><img src="images/finale1_on.jpg" class="displayNone imgSetOn4"></div>
+        	<div id="playlist11" class="vs_divs"><img src="app/images/finale1.jpg" class="imgSet4"><img src="app/images/finale1_on.jpg" class="displayNone imgSetOn4"></div>
            
         </div><!-- finale -->
         
@@ -133,14 +133,14 @@ $detect = new Mobile_Detect();
         <div id="footer">
         	<div id="icon_links">
             	<ul>	
-                	<li><a href="http://www.xbox.com/" target="_blank"><img src="images/xbox360.jpg"></a></li>
-                    <li><a href="http://www.xbox.com/" target="_blank"><img src="images/xboxlive.jpg"></a></li>
-                    <li><a href="http://us.playstation.com/" target="_blank"><img src="images/ps3.jpg"></a></li>
-                    <li><a href="http://us.playstation.com/psn/" target="_blank"><img src="images/psn.jpg"></a></li>
-                    <li><a href="http://www.nintendo.com/wiiu" target="_blank"><img src="images/wii.jpg"></a></li>
-                    <li><a href="http://www.netherrealm.com/" target="_blank"><img src="images/nether.jpg"></a></li>
-                    <li><a href="http://www.dccomics.com/" target="_blank"><img src="images/dccomics.jpg"></a></li>
-                    <li><a href="http://www.warnerbros.com/" target="_blank"><img src="images/wb.jpg"></a></li>
+                	<li><a href="http://www.xbox.com/" target="_blank"><img src="app/images/xbox360.jpg"></a></li>
+                    <li><a href="http://www.xbox.com/" target="_blank"><img src="app/images/xboxlive.jpg"></a></li>
+                    <li><a href="http://us.playstation.com/" target="_blank"><img src="app/images/ps3.jpg"></a></li>
+                    <li><a href="http://us.playstation.com/psn/" target="_blank"><img src="app/images/psn.jpg"></a></li>
+                    <li><a href="http://www.nintendo.com/wiiu" target="_blank"><img src="app/images/wii.jpg"></a></li>
+                    <li><a href="http://www.netherrealm.com/" target="_blank"><img src="app/images/nether.jpg"></a></li>
+                    <li><a href="http://www.dccomics.com/" target="_blank"><img src="app/images/dccomics.jpg"></a></li>
+                    <li><a href="http://www.warnerbros.com/" target="_blank"><img src="app/images/wb.jpg"></a></li>
                 </ul>
             </div><!-- /icon_links -->
             
@@ -148,7 +148,7 @@ $detect = new Mobile_Detect();
             	INJUSTICE: GODS AMONG US software © 2012 Warner Bros. Entertainment Inc. Developed by NetherRealm Studios. All other trademarks and copyrights are the property of their respective owners. "PlayStation" and the "PS" Family logo are registered trademarks and the "PS3" and the PlayStation Network logo are trademarks of Sony Computer Entertainment Inc. Microsoft, Xbox, Xbox 360, Xbox LIVE, and the Xbox logos are trademarks of the Microsoft group of companies and are used under license from Microsoft. Nintendo trademarks and copyrights are properties of Nintendo. All rights reserved.<br>
 <br>
 &nbsp;
-                <div class="left_float"><img src="images/wb_logo.jpg"  style="padding-right:5px;"></div>
+                <div class="left_float"><img src="app/images/wb_logo.jpg"  style="padding-right:5px;"></div>
                 <div>DC LOGO, and all characters, their distinctive likenesses, and related elements are trademarks of DC Comics © 2012.
 NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entertainment Inc.
 (s12)</div>
@@ -156,9 +156,9 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
             
             <div id="legal2">
             	
-                <div class="left_float"><a href="http://www.esrb.org/" target="_blank"><img src="images/rating.jpg"></a></div>
-                <div class="left_float"><a href="http://www.pegi.info/en/" target="_blank"><img src="images/footerIcon1.jpg"></a></div>
-                <div class="left_float"><a href="http://www.usk.de/en/" target="_blank"><img src="images/footerIcon2.jpg"></a></div>
+                <div class="left_float"><a href="http://www.esrb.org/" target="_blank"><img src="app/images/rating.jpg"></a></div>
+                <div class="left_float"><a href="http://www.pegi.info/en/" target="_blank"><img src="app/images/footerIcon1.jpg"></a></div>
+                <div class="left_float"><a href="http://www.usk.de/en/" target="_blank"><img src="app/images/footerIcon2.jpg"></a></div>
                 
 
 				<div style="float:right;"> <a href="http://www.warnerbros.com/privacy/terms.html" target="_blank" style="color:#666">TERMS OF USE</a> &nbsp; &nbsp; <a href="http://www.warnerbros.com/privacy/policy.html" target="_blank" style="color:#666">PRIVACY POLICY</a></div>
@@ -198,12 +198,12 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 
 
 
-<script src="lib/jquery-latest.min.js" language="javascript"></script>
-<script src="lib/jquery.bpopup.min.js" language="javascript"></script><!-- Modal http://dinbror.dk/blog/bPopup/ -->
-<script src="lib/jquery.sticky.js" language="javascript"></script><!-- http://labs.anthonygarand.com/sticky/ -->
-<script src="lib/waypoints.min.js"language="javascript"></script><!-- http://imakewebthings.com/jquery-waypoints/ -->
+<script src="app/lib/jquery-latest.min.js" language="javascript"></script>
+<script src="app/lib/jquery.bpopup.min.js" language="javascript"></script><!-- Modal http://dinbror.dk/blog/bPopup/ -->
+<script src="app/lib/jquery.sticky.js" language="javascript"></script><!-- http://labs.anthonygarand.com/sticky/ -->
+<script src="app/lib/waypoints.min.js"language="javascript"></script><!-- http://imakewebthings.com/jquery-waypoints/ -->
 <!-- <script src="lib/jquery.jsmovie.1.4.3b.min.js" language="javascript"></script> --><!-- jsMovie https://code.google.com/p/jsmovie/ -->
-<script src="lib/jquery.easing.min.js" language="javascript"></script>
+<script src="app/lib/jquery.easing.min.js" language="javascript"></script>
 <script>
 	
     $(document).ready(function (){
@@ -789,7 +789,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			$('#bio_modal').bPopup({
 				onOpen: function() {
 					
-					bioContent.html('<iframe width="804" height="550" frameborder="0" style="overflow:hidden" scrolling="no" src="/#/bios/'+charName+'"></iframe>' || '');
+					bioContent.html('<iframe width="804" height="550" frameborder="0" style="overflow:hidden" scrolling="no" src="/app/#/bios/'+charName+'"></iframe>' || '');
 					 //bioContent.html('<iframe  src="test.html" ></iframe>' || '');
 				},
 				onClose: function() {
@@ -814,7 +814,7 @@ NETHERREALM STUDIOS LOGO, WB GAMES LOGO, WB SHIELD: ™ & © Warner Bros. Entert
 			$('#bio_modal').bPopup({
 				onOpen: function() {
 					
-					bioContent.html('<iframe width="804" height="550" frameborder="0"  style="overflow:hidden" scrolling="no" src="/#/bios/batman"></iframe>' || '');
+					bioContent.html('<iframe width="804" height="550" frameborder="0"  style="overflow:hidden" scrolling="no" src="app/#/bios/batman"></iframe>' || '');
 					 //bioContent.html('<iframe  src="test.html" ></iframe>' || '');
 				},
 				onClose: function() {
