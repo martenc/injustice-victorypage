@@ -1,8 +1,23 @@
-RewriteCond %{HTTPS} =off
-RewriteRule ^(.*)$ - [env=ps:https]
-RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*)$ - [env=ps:http]
+
+
+#RewriteCond %{HTTPS} =on
+#RewriteRule ^(.*)$ - [env=ps:https]
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^(.*)$ - [env=ps:http]
  
+#RewriteEngine on
+#RewriteCond %{SERVER_PORT} ^443$
+#RewriteRule ^(.*)$ http://injustice.dccomics.com/$1 [R=301,L]
+
+RewriteEngine On
+RewriteCond %{HTTPS} on
+RewriteRule ^(.*)$ http://injustice.dccomics.com/$1 [R=301,L]
+#RewriteRule ^(.*)$ http://www.google.com/$1 
+
+#RewriteCond %{SERVER_PORT} ^443$
+#RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+
 # redirect urls with index.html to folder
 #RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*)index.html HTTP/ [NC]
 #RewriteRule ^.*$ %{ENV:ps}://%{SERVER_NAME}/%1 [R=301,L]
@@ -16,3 +31,4 @@ RewriteEngine On
 RewriteBase /
 RewriteRule ^modal.* index.php [R=301,NC,L]
 RewriteRule ^tournaments.* index.php [R=301,NC,L]
+RewriteRule ^v4.* index.php [R=301,NC,L]
