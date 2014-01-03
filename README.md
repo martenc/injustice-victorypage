@@ -1,4 +1,4 @@
-# Injustice Victory Page — based on angular-seed
+# Injustice Victory Page — http://injustice.dccomics.com/
 
 Based on the application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
 It contains AngularJS libraries, test libraries and a bunch of scripts all preconfigured for
